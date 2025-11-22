@@ -157,8 +157,8 @@ def render_plano_carreira(grad_ini, data_base, cenario_idx, data_nasc):
 
 def main():
     with st.sidebar:
-        # LOGO COM IMAGEM
-        st.image("policeman.png", width=150)
+        # LOGO EM EMOJI
+        st.markdown("<div style='text-align: center; font-size: 80px;'>👮♂️</div>", unsafe_allow_html=True)
         
         st.markdown("<h2 style='text-align: center;'>Simulador de Carreira</h2>", unsafe_allow_html=True)
         st.markdown("---")
