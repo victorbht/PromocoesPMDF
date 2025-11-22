@@ -151,6 +151,10 @@ def calcular_proxima_imediata():
     except (ValueError, IndexError):
         proxima_graduacao = "FIM DE CARREIRA (Praças)" 
 
+    if data_ultima_promocao is None:
+        print("❌ Erro: Data da última promoção é obrigatória.")
+        return
+        
     data_minima_elegivel = data_ultima_promocao + relativedelta(months=+intersticio_em_meses)
     data_proxima_promocao = calcular_proxima_promocao(data_ultima_promocao, intersticio_em_meses)
     
@@ -234,6 +238,10 @@ def calcular_plano_carreira(melhor_cenario: bool):
         print("\n✅ Já alcançou o posto final da carreira de Praças.")
         return
     
+    if data_ultima_promocao is None:
+        print("❌ Erro: Data da última promoção é obrigatória.")
+        return
+        
     indice = 1 if melhor_cenario else 0 
     
     projetar_promocoes(graduacao_atual, data_ultima_promocao, indice, data_nascimento)

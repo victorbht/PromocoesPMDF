@@ -1,0 +1,9 @@
+[theme]
+primaryColor = "#003466"    # Azul PMDF (Botões, Seleções, Foco)
+backgroundColor = "#FFFFFF" # Fundo Principal (Branco)
+secondaryBackgroundColor = "#F0F2F6" # Fundo da Sidebar e Cards (Cinza muito claro)
+textColor = "#2C3E50"       # Texto (Cinza Escuro/Azul Petróleo)
+font = "sans serif"         # Fonte Padrão (Roboto/Arial)
+
+[browser]
+gatherUsageStats = false    # Privacidade
