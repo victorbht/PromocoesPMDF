@@ -49,14 +49,16 @@ st.markdown(f"""
     /* Ocultar menu e informações do Streamlit */
     #MainMenu {{visibility: hidden;}}
     footer {{visibility: hidden;}}
-    header {{visibility: hidden;}}
     
     /* Ocultar "Made with Streamlit" */
     .css-1dp5vir {{display: none;}}
     .css-hi6a2p {{display: none;}}
-    [data-testid="stToolbar"] {{display: none;}}
     [data-testid="stDecoration"] {{display: none;}}
     [data-testid="stStatusWidget"] {{display: none;}}
+    
+    /* Manter botão da sidebar visível */
+    [data-testid="collapsedControl"] {{display: block !important;}}
+    button[kind="header"] {{display: block !important;}}
 </style>
 """, unsafe_allow_html=True)
 
