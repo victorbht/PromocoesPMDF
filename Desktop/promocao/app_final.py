@@ -6,7 +6,7 @@ import pandas as pd
 # --- 1. CONFIGURAÇÃO DA PÁGINA ---
 st.set_page_config(
     page_title="Simulador de Carreira Militar", 
-    page_icon="👮‍♂️",
+    page_icon="👮♂️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -37,6 +37,13 @@ st.markdown(f"""
     /* Centralizar elementos da sidebar */
     [data-testid="stSidebar"] {{
         text-align: center;
+    }}
+    
+    /* Centralizar imagem */
+    .stImage {{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }}
 </style>
 """, unsafe_allow_html=True)
@@ -150,8 +157,8 @@ def render_plano_carreira(grad_ini, data_base, cenario_idx, data_nasc):
 
 def main():
     with st.sidebar:
-        # LOGO EM EMOJI (Zero risco, carrega sempre)
-        st.markdown("<div style='text-align: center; font-size: 80px;'>👮‍♂️</div>", unsafe_allow_html=True)
+        # LOGO COM IMAGEM
+        st.image("policeman.png", width=150)
         
         st.markdown("<h2 style='text-align: center;'>Simulador de Carreira</h2>", unsafe_allow_html=True)
         st.markdown("---")
